@@ -63,8 +63,8 @@ def get_list_source_dirs():
             # "python_libraries/nifty/python",
             "repositories/pathutils",
             "python_libraries/nifty/tmp/tmp.VVvldgIb9A/cmake-build-debug/python",
+            "python_libraries/nifty/tmp/tmp.1DGbcigwoN/cmake-build-debug/python", # Affogato
             "python_libraries/cremi_python",
-            "python_libraries/affogato/python",
             "pyCharm_projects/inferno",
             # "pyCharm_projects/constrained_mst",
             # "pyCharm_projects/neuro-skunkworks",
