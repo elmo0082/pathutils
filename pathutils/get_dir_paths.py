@@ -70,6 +70,7 @@ def get_list_source_dirs():
             # "pyCharm_projects/neuro-skunkworks",
             "pyCharm_projects/segmfriends",
             "pyCharm_projects/speedrun",
+            "pyCharm_projects/neurofire",
             "pyCharm_projects/embeddingutils",
             "pyCharm_projects/firelight",
             "pyCharm_projects/ConfNets",

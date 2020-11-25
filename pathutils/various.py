@@ -1,10 +1,14 @@
 import os
 from .get_dir_paths import get_home_dir, get_list_source_dirs
+import sys
+import setuptools
 
-
-def create_pth_file(config_name='my_config.pth'):
+def create_pth_file(config_name='my_config.pth', create_in_site_package_dir=True):
     assert config_name.endswith('.pth')
-    output_file = os.path.join(os.getcwd(), config_name)
+    if create_in_site_package_dir:
+        output_file = os.path.join(setuptools.__path__[0], "../", config_name)
+    else:
+        output_file = os.path.join(os.getcwd(), config_name)
     with open(output_file, "w") as f:
         for dir in get_list_source_dirs():
             f.write("{}\n".format(dir))
