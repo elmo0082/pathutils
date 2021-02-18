@@ -2,35 +2,16 @@ import getpass
 import socket
 import os
 
+# CUDA_VISIBLE_DEVICES=4 python experiments/cremi/infer.py -- --inherit R1SD --update0 infer_config.yml --config.inference.index_output 1 --config.inference.threshold 0.5
 
 def get_home_dir():
     username = getpass.getuser()
     hostname = socket.gethostname()
-    if username == 'abailoni':
-        if hostname == 'trendytukan':
-            return '/net/hcihome/storage/abailoni/'
-        elif hostname == 'ialgpu01' or hostname == 'birdperson' or hostname == 'sirherny':
-            return '/home/abailoni/local_home/'
-            # return '/home/abailoni/hci_home/'
-        # elif hostname == 'sfb1129gpu01':
-        #     return '/net/hcihome/storage/abailoni/ial_local_home/'
-        elif hostname == 'quadxeon5':
-            return '/srv/scratch/abailoni/'
-        elif hostname == 'hgsgpu01':
-            return '/srv/scratch/abailoni/'
-        elif hostname == 'hgsgpu02':
-            return '/srv/localscratch/abailoni/'
-        # elif hostname == 'sfb1129gpu01':
-        #     return '/net/hcihome/storage/abailoni/local_copy_home/'
-        else:
-            return '/net/hcihome/storage/abailoni/local_home/'
-    elif hostname == 'trendytukan' and username == 'abailoni_local':
-        # return '/home/abailoni_local/hci_home/'
-        return '/home/abailoni_local/ialgpu1_local_home/'
-    elif username == 'abailoni_local' and hostname == 'fatchicken':
-        return '/home/abailoni_local/local_copy_home/'
-    elif hostname == 'sfb1129gpu02' and username == 'abailoni_tmp':
-        return '/home_sdb/abailoni_tmp/local_copy_home/'
+
+    if username == 'sdamrich_tmp':
+        return '/home_sdc/sdamrich_tmp/'
+    elif username == 'jgrieser_tmp':
+	    return '/home_sdb/jgrieser_tmp/'
     else:
         raise ValueError("Home path not available for this machine and user")
 
