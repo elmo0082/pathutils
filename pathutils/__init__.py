@@ -3,4 +3,4 @@ from .various import *
 
 # Add source dirs to python path:
 import sys
-sys.path += get_list_source_dirs()
+#sys.path += get_list_source_dirs()
