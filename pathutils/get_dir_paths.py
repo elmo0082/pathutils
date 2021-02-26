@@ -11,7 +11,7 @@ def get_home_dir():
     if username == 'sdamrich_tmp':
         return '/home_sdc/sdamrich_tmp/'
     elif username == 'jgrieser_tmp':
-	    return '/home_sdb/jgrieser_tmp/'
+	return '/home_sdb/jgrieser_tmp/'
     else:
         raise ValueError("Home path not available for this machine and user")
 
